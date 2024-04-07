@@ -1,4 +1,4 @@
-package org.kshrd.model;
+package org.kshrd.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

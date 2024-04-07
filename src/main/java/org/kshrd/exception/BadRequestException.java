@@ -1,2 +1,8 @@
-package org.kshrd.exception;public class BadRequestException {
+package org.kshrd.exception;
+
+public class BadRequestException extends RuntimeException {
+
+    public BadRequestException(String message) {
+        super(message);
+    }
 }

@@ -1,5 +1,6 @@
 package org.kshrd.controllers;
 
+import jakarta.validation.Valid;
 import org.kshrd.dto.APIResponse;
 import org.kshrd.dto.VenueRequest;
 import org.kshrd.models.Venue;
@@ -38,7 +39,7 @@ public class VenueController {
     }
 
     @PostMapping
-    public ResponseEntity<APIResponse<Venue>> addNewVenue(@RequestBody VenueRequest venueRequest) {
+    public ResponseEntity<APIResponse<Venue>> addNewVenue(@RequestBody @Valid VenueRequest venueRequest) {
         Venue venue = venueService.addNewVenue(venueRequest);
         APIResponse<Venue> venueApiResponse = APIResponse.<Venue>builder()
                 .message("The venue has been successfully added.")

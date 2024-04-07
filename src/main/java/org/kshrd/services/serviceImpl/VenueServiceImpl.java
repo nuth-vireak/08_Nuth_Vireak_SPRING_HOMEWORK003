@@ -26,7 +26,6 @@ public class VenueServiceImpl implements VenueService {
     public Venue addNewVenue(VenueRequest venueRequest) {
         return venueRepository.addNewVenue(venueRequest);
     }
-
     @Override
     public Venue getVenueById(Integer id) {
         return venueRepository.getVenueById(id);
